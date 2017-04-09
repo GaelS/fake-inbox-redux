@@ -1,4 +1,7 @@
-export default function(initialState = {}, reducer) {
+import reducer from './reducer.js';
+import initialState from './initialState.js';
+
+const Store = function(initialState = {}, reducer) {
   
   //notre objet state
   let state = initialState;
@@ -20,3 +23,6 @@ export default function(initialState = {}, reducer) {
     dispatch,
   };
 };
+
+const store = new Store(initialState, reducer);
+export default store;

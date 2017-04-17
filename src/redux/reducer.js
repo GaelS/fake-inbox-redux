@@ -1,4 +1,4 @@
-export const reducer = (action, state) => {
+export default (action, state) => {
   if (action === 'ADD') {
     return { counter: state.counter + 1 };
   } else if (action === 'SUBSTRACT') {

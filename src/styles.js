@@ -2,6 +2,7 @@ export default {
     mainWrapper: {
         width : '1000px',
         maxHeight : '1000px',
+        minHeight : '500px',
         overflow: 'auto',
         margin: 'auto',
         marginTop: '20px',
@@ -12,16 +13,20 @@ export default {
     mainTitle: {
         textAlign: 'center',
         justifyContent: 'center',
-        flexDirection: 'column',
         alignItems: 'center',
         display: 'flex',    
         fontSize: '25px',
-        padding: ' 20px 0px 30px 0',
+        padding: ' 20px 0px 20px 0',
+        marginRight: '10px',
+    },
+    title : {
+        marginRight: '10px',
     },
     refreshButton: {
         cursor: 'pointer',
-        marginTop: '10px',
         fontSize: '15px',
+        textAlign: 'center',
+        marginBottom: '10px',
     },
     senderInfo: {
         display: 'flex',

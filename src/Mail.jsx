@@ -1,34 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Item, Image, Label, Icon } from 'semantic-ui-react';
 
 import S from './styles.js';
 import store from './redux/store.js';
 
-class Mail extends Component {
-  constructor(props) {
-      super(props);
-  };
+const Mail = props => {
 
-  onClick =  () => store.dispatch('SUBSTRACT');
+  const {     
+      /*mail : {
+        firstName,
+        lastName,
+        avatar, 
+        object,
+        content,
+        timeStamp,
+      },*/
+      index,
+  } = props;
+  
+  
+  const onDelete =  () => store.dispatch('SUBSTRACT');
 
-  render() {
-    const {     
-        mail : {
-          firstName,
-          lastName,
-          avatar, 
-          object,
-          content,
-          timeStamp,
-        },
-        index,
-    } = this.props;
+  return (
+    <div 
+      style={{ ...S.mailWrapper, backgroundColor: index%2 === 0 ? '#f5f4f4' : 'white' }}
+    >
+      <div 
+        style={S.mailHeader}
+        >
 
-    return (
-    <div style={{ ...S.mailWrapper, backgroundColor: index%2 === 0 ? '#f5f4f4' : 'white' }}>
-        <div style={S.mailHeader}>
-          <div style={S.senderInfo}>
-            <img src={avatar} style={S.senderAvatar}/>
+         {/*<div 
+            style={S.senderInfo}
+          >
+            <img 
+              src={avatar} 
+              style={S.senderAvatar}
+            />
             <div 
               color='blue'
               style={S.senderLabel}  
@@ -53,16 +60,15 @@ class Mail extends Component {
           <div>{content}</div>
           <Button
             icon
-            onClick={this.onClick}
+            onClick={onDelete}
             color='red'
             style= {S.mailButton}
           >
             <Icon name='delete' />
-          </Button>
+          </Button>*/}
         </div>
       </div>
     );
-  }
 };
 
 export default Mail;

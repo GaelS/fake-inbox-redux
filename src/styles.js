@@ -1,7 +1,12 @@
 export default {
+    centeredContainer: {
+        display:'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '50px',
+    },
     mainWrapper: {
         width : '1000px',
-        maxHeight : '1000px',
         minHeight : '500px',
         overflow: 'auto',
         margin: 'auto',
@@ -22,39 +27,48 @@ export default {
     title : {
         marginRight: '10px',
     },
+    mailNumberLabel: {
+        width: '20px',
+    },
     refreshButton: {
         cursor: 'pointer',
         fontSize: '15px',
         textAlign: 'center',
         marginBottom: '10px',
     },
+    header: {
+        display:'flex',
+    },
+    subheader: {
+        display: "flex",
+        justifyContent: "space-around",
+        flex: 1,
+    },
+    subheaderActions: {
+        display:'flex',
+        justifyContent: 'flex-end',
+    },
     senderInfo: {
         display: 'flex',
-    },
-    senderLabel: {
-        margin: 'auto',
-        padding: '5px',
-
-    },
-    senderAvatar: {
+        flexDirection: 'column',
+    },    senderAvatar: {
         borderRadius: '40px',
         maxWidth: '60px',
         maxHeight: '60px' 
     },
     mailWrapper: {
         borderBottom: '1px solid grey',
-        paddingBottom: '10px',
     },
     mailHeader: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: 'lightgrey',
         padding: '10px',
     },
     mailObject: {
         fontWeight: 'bold',
         fontSize: '15px',
+        flex: 1,
     },
     mailTimeStamp: {
         fontSize: '9px',
@@ -67,6 +81,10 @@ export default {
         display: 'flex',
         justifyContent: 'space-between',
         textAlign: 'justify',
-        padding: '10px 40px 10px 40px',
+        padding: '10px 40px 10px 80px',
     },
+    footer: {
+        fontStyle: 'italic',
+        fontSize: '10px',
+    }
 };

@@ -11,7 +11,7 @@ const Mail = props => {
     onDelete,
     onClickAsRead
   } = props;
-console.log(index % 2 === 0)
+
   return (
     <div
       style={{
@@ -20,14 +20,12 @@ console.log(index % 2 === 0)
       }}
     >
       <div style={S.mailHeader}>
-
         {
           <div style={S.senderInfo}>
             <div style={S.header}>
               <div>
                 <img src={avatar} style={S.senderAvatar} />
                 <div color="blue" style={S.senderLabel}>
-                  {`${firstName} ${lastName}`}
                   <div style={S.mailTimeStamp}>
                     {`${Math.round((Date.now() - timeStamp) / 6000)} minutes ago`}
                   </div>
@@ -35,7 +33,8 @@ console.log(index % 2 === 0)
               </div>
               <div style={S.subheader}>
                 <div style={S.mailObject}>
-                  <div>{object}</div>
+                  <div>{`From: ${firstName} ${lastName}`}</div>
+                  <div>{`Object: ${ object }`}</div>
                 </div>
                 <div style={S.subheaderActions}>
                   <Button

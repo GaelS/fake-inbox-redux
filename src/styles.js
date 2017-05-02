@@ -1,13 +1,8 @@
 export default {
-    centeredContainer: {
-        display:'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '50px',
-    },
     mainWrapper: {
-        width : '1000px',
-        minHeight : '500px',
+        width : '700px',
+        minHeight : '100vh',
+        marginTop: '50px',
         overflow: 'auto',
         margin: 'auto',
         marginTop: '20px',
@@ -27,6 +22,12 @@ export default {
     title : {
         marginRight: '10px',
     },
+    centeredContainer: {
+        display:'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '50px',
+    },
     mailNumberLabel: {
         width: '20px',
     },
@@ -38,6 +39,7 @@ export default {
     },
     header: {
         display:'flex',
+        alignItems: 'center',
     },
     subheader: {
         display: "flex",
@@ -69,6 +71,7 @@ export default {
         fontWeight: 'bold',
         fontSize: '15px',
         flex: 1,
+        marginLeft: '20px',
     },
     mailTimeStamp: {
         fontSize: '9px',
